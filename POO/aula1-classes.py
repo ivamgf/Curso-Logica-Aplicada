@@ -12,3 +12,4 @@ p1=joao
 print(joao)
 print(typeOf)
 print(p1)
+print(dir(object))
