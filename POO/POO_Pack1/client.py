@@ -3,12 +3,13 @@
 # Classes
 class Client:
     # Constructor
-    def __init__(self, name, cpf, address, address_number, phone, email):
+    def __init__(self, name, cpf, address, address_number, dt_birth, phone, email):
         # Privates Atributes
         self.__name=name
         self.__cpf=cpf
         self.__address=address
         self.__address_number=address_number
+        self.__dt_birth = dt_birth
         self.__phone=phone
         self.__email=email
 
@@ -28,6 +29,10 @@ class Client:
     @property
     def address_number(self):
         return self.__address_number
+
+    @property
+    def dt_birth(self):
+        return self.__dt_birth
 
     @property
     def phone(self):
@@ -55,6 +60,10 @@ class Client:
     def address_number(self, address_number):
         self.__address_number = address_number
 
+    @dt_birth.setter
+    def dt_birth(self, dt_birth):
+        self.__dt_birth = dt_birth
+
     @phone.setter
     def phone(self, phone):
         self.__phone=phone
@@ -68,17 +77,19 @@ class Client:
         return (f"Cliente: {self.__name}\n"
                 f"CPF: {self.__cpf}\n"
                 f"Endereço: {self.__address}, {self.__address_number}\n"
+                f"Data de Nascimento: {self.__dt_birth}\n"
                 f"Telefone: {self.__phone}\n"
                 f"E-mail: {self.__email}")
 
 # Instances
-client = Client("João", 12345678901, "Rua das amoras", 16, "55+ (48) 9 2837-2746", "joao@gmail")
+client = Client("João", 12345678901, "Rua das amoras", 16, "12/02/1980","55+ (48) 9 2837-2746", "joao@gmail")
 
 # Exit
 print(client.name)
 print(client.cpf)
 print(client.address)
 print(client.address_number)
+print(client.dt_birth)
 print(client.phone)
 print(client.email)
 print(client)
