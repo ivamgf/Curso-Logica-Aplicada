@@ -6,7 +6,7 @@ from account import Account
 from checkingAccount import CheckingAccount
 from savingsAccount import SavingsAccount
 
-# Instanciar Cliente
+# Client Instance
 client = Client(
     name="João",
     cpf=12345678901,
@@ -17,7 +17,7 @@ client = Client(
     email="joao@gmail"
 )
 
-# Instanciar Conta Corrente
+# CheckingAccount Instance
 checkingAccount = CheckingAccount(
     agency=27346,
     agency_dig=3,
@@ -27,7 +27,7 @@ checkingAccount = CheckingAccount(
     balance=235.87
 )
 
-# Instanciar Conta Poupança
+# SavingsAccount Instance
 savingsAccount = SavingsAccount(
     agency=27346,
     agency_dig=3,
@@ -45,4 +45,14 @@ print("\n=== CONTA CORRENTE ===")
 print(checkingAccount)
 
 print("\n=== CONTA POUPANÇA ===")
+print(savingsAccount)
+
+# Calling the same method (polymorphism)
+print("\n=== ATUALIZANDO SALDOS ===")
+checkingAccount.update_balance()
+savingsAccount.update_balance()
+
+# After the update
+print("\n=== SALDOS APÓS ===")
+print(checkingAccount)
 print(savingsAccount)

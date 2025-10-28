@@ -48,3 +48,8 @@ class SavingsAccount(Account):
             f"Número da conta: {self.__account_number}-{self.__account_dig}\n"
             f"Saldo: {self.__balance}"
         )
+
+    def update_balance(self):
+        # yield of 1% per month
+        self.__balance *= 1.01
+        print("Conta Poupança atualizada: rendimento de 1% aplicado")

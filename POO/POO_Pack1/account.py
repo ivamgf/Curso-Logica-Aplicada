@@ -44,3 +44,6 @@ class Account:
             f"Código do banco: {self.__code}"
         )
 
+    # Generic Method
+    def update_balance(self):
+        print("Atualização genérica de saldo para conta bancária.")

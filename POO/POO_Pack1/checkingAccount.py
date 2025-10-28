@@ -49,3 +49,8 @@ class CheckingAccount(Account):
             f"Saldo: {self.__balance}"
         )
 
+    # Polymorphism: overrides the superclass method
+    def update_balance(self):
+        # Monthly maintenance fee
+        self.__balance -= 5
+        print("Conta Corrente atualizada: taxa de manutenção cobrada (-5)")
