@@ -44,3 +44,8 @@ class Account:
             f"Código do banco: {self.__code}"
         )
 
+# Instances
+account=Account(1234, 5, 131)
+
+# Exit
+print(account)

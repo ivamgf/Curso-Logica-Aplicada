@@ -49,8 +49,3 @@ class CheckingAccount(Account):
             f"Saldo: {self.__balance}"
         )
 
-# Instances
-checkingAccount=CheckingAccount(27346,3,456, 152437, 9, 235.87)
-
-# Exit
-print(checkingAccount)

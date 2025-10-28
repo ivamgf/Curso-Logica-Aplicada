@@ -1,14 +1,9 @@
-# Savings Account Class
-
-# Imports
-from account import Account
+# Checking Account Class
 
 # Class
-class SavingsAccount(Account):
+class CheckingAccount():
     # Constructor
-    def __init__(self, agency,agency_dig,code, account_number, account_dig, balance):
-        # Constructor Super Class
-        super().__init__(agency,agency_dig,code)
+    def __init__(self, account_number, account_dig, balance):
         # Atributes Privates
         self.__account_number = account_number
         self.__account_dig = account_dig
@@ -42,9 +37,15 @@ class SavingsAccount(Account):
     def balance(self, balance):
         self.__balance = balance
 
-    # Show Savings Account Informations
+    # Show Checking Account Informations
     def __str__(self):
         return (
             f"Número da conta: {self.__account_number}-{self.__account_dig}\n"
             f"Saldo: {self.__balance}"
         )
+
+# Instances
+checkingAccount=CheckingAccount(27346,3,456)
+
+# Exit
+print(checkingAccount)

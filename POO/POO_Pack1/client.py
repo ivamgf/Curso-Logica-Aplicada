@@ -81,17 +81,6 @@ class Client:
                 f"Telefone: {self.__phone}\n"
                 f"E-mail: {self.__email}")
 
-# Instances
-client = Client("João", 12345678901, "Rua das amoras", 16, "12/02/1980","55+ (48) 9 2837-2746", "joao@gmail")
 
-# Exit
-print(client.name)
-print(client.cpf)
-print(client.address)
-print(client.address_number)
-print(client.dt_birth)
-print(client.phone)
-print(client.email)
-print(client)
 
 
